@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      #parallax-section-1 .layer1{
+        width: 100%;
+        background-repeat: no-repeat;
+        background-image: url('../images/reoger.jpg');
+      }
+      #parallax-section-2 .layer1{
+        width: 100%;
+        background-repeat: no-repeat;
+        background-image: url('../images/nadal2.jpg');
+      }
+      .parallax-container {
+        height: 650px;
+      }
+      .layer2 {
+        background-color: white;
+        padding-top: 100px;
+        opacity: 0.3;
+      }
+
+    </style>
+  </head>
+  <body>
+
+      <div class="parallax-container" id="parallax-section-1">
+        <div class= "layer1">
+        <div class="container layer2">
+          <div class= "row">
+            <div class="col-md-12">
+              <h1>Roger Federer is great!</h1>
+              <p>
+                This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nulla, omnis praesentium, optio obcaecati sunt quo accusantium ipsa distinctio inventore maxime! Fugit, nesciunt iusto eaque ad recusandae ut odit aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quis aperiam qui dolore deleniti maiores officiis, commodi sequi omnis. Non, distinctio. Consectetur necessitatibus, nesciunt culpa numquam modi porro quia error.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur fuga maxime, illo quia sint temporibus optio ea amet. Harum natus assumenda odit aliquid placeat modi, autem aperiam maiores repellendus doloribus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eveniet dolore fugit suscipit ipsa, eius, error voluptatum, placeat et officiis, explicabo libero beatae quis eos debitis illo sed mollitia neque?
+              </p>
+            </div>
+          </div></div>
+        </div>
+      </div>
+      <div class="parallax-container" id="parallax-section-2">
+        <div class= "layer1" >
+        <div class="container layer2" style="background-color:white;">
+          <div class= "row">
+            <div class="col-md-12">
+              <h1>Nadal is Meh!</h1>
+              <p>
+                This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nulla, omnis praesentium, optio obcaecati sunt quo accusantium ipsa distinctio inventore maxime! Fugit, nesciunt iusto eaque ad recusandae ut odit aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quis aperiam qui dolore deleniti maiores officiis, commodi sequi omnis. Non, distinctio. Consectetur necessitatibus, nesciunt culpa numquam modi porro quia error.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur fuga maxime, illo quia sint temporibus optio ea amet. Harum natus assumenda odit aliquid placeat modi, autem aperiam maiores repellendus doloribus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eveniet dolore fugit suscipit ipsa, eius, error voluptatum, placeat et officiis, explicabo libero beatae quis eos debitis illo sed mollitia neque?
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="../bower_components/ScrollMagic/js/jquery.scrollmagic.min.js"></script>
+    <script src="../bower_components/ScrollMagic/js/jquery.scrollmagic.debug.js"></script>
+    <script>
+      $(function() {
+
+        var scrollMagicController =  new ScrollMagic();
+
+        //build tween
+        var tween = new TimelineMax ()
+          .add([
+            TweenMax.to("#parallax-section-1 .layer1", 1, {backgroundPosition: "0px 40%", ease: Linear.easeNone})
+          ]);
+
+        // build scene
+        var scene = new ScrollScene({triggerElement: "#parallax-section-1", duration: $('#parallax-section-1').outerHeight()})
+                .setTween(tween)
+                .addTo(scrollMagicController);
+        //build tween
+        var tween = new TimelineMax ()
+          .add([
+            TweenMax.to("#parallax-section-2 .layer1", 1, {backgroundPosition: "0px 40%", ease: Linear.easeNone})
+          ]);
+
+        // build scene
+        var scene = new ScrollScene({triggerElement: "#parallax-section-2", duration: $('#parallax-section-2').outerHeight()})
+                .setTween(tween)
+                .addTo(scrollMagicController);
+
+        // show indicators (requires debug extension)
+        scene.addIndicators();
+
+
+
+      });
+    </script>
+  </body>
+</html>
+

@@ -19,12 +19,12 @@
     <style>
       section.parallax-section-1.layer-1{
         width: 100%;
-        background:  url('../images/reoger.jpg') no-repeat local;
+        background:  url('../images/reoger.jpg') no-repeat fixed;
 
       }
       section.parallax-section-2.layer-1{
         width: 100%;
-        background:  url('../images/nadal2.jpg') no-repeat;
+        background:  url('../images/nadal2.jpg') no-repeat fixed;
       }
       .layer-2 {
         color: white;
@@ -65,7 +65,7 @@
 
                   <h2>Will Knock Your Socks Off Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto odio fuga</h2> <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et dolorum ipsam perspiciatis totam fugit fugiat perferendis, esse exercitationem culpa tempora aliquam, unde commodi eveniet repellendus odit aliquid officia vero. Debitis!</div>
                   <div>Ducimus fugiat, iusto blanditiis odio, sapiente qui, excepturi eveniet, reprehenderit magnam odit officiis. Deserunt, numquam ratione culpa, sequi nam odit adipisci voluptate sint saepe placeat. Beatae corporis odit eos quam!</div>
-                  <div>Numquam magni assumenda ratione omnis dolor ea, quos dignissimos esse sequi est tempore voluptate fugit, possimus repellat obcaecati vel quas tempora repellendus distinctio incidunt veritatis quasi quo veniam placeat? Labore.</div>
+
 
                 </div>
               </div>
@@ -97,8 +97,9 @@
               <div class="row">
                 <div class="col-md-4">
                   <h1>One Page Wonder 2</h1>
-
-                  <h2>Will Knock Your Socks Off Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto odio fuga</h2>
+                  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et dolorum ipsam perspiciatis totam fugit fugiat perferendis, esse exercitationem culpa tempora aliquam, unde commodi eveniet repellendus odit aliquid officia vero. Debitis!</div>
+                  <div>Ducimus fugiat, iusto blanditiis odio, sapiente qui, excepturi eveniet, reprehenderit magnam odit officiis. Deserunt, numquam ratione culpa, sequi nam odit adipisci voluptate sint saepe placeat. Beatae corporis odit eos quam!</div>
+                  <div>Numquam magni assumenda ratione omnis dolor ea, quos dignissimos esse sequi est tempore voluptate fugit, possimus repellat obcaecati vel quas tempora repellendus distinctio incidunt veritatis quasi quo veniam placeat? Labore.</div>
                 </div>
               </div>
 
@@ -153,7 +154,7 @@
         var scene = new ScrollScene({
           triggerElement: "#js-parallax-2",
           duration: 700,
-          offset: 10
+          offset: -100
         })
                 .setTween(tween)
                 .addTo(scrollMagicController);
